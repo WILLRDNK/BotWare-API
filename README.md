@@ -10,7 +10,7 @@ Este projeto surgiu como solução para testar acesso remoto a equipamentos de r
 ### Autor
 Willian da Rosa Rodrigues
 
-
+```mermaid
 graph LR
 A[Square Rect] -- Link text --> B((Circle))
 A --> C(Round Rect)
