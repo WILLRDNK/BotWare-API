@@ -12,7 +12,9 @@ Willian da Rosa Rodrigues
 
 ```mermaid
 graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+A[http request] ---> B((Bot))
+A --> C(nmap)
+B --> D{json response}
+C --> Faill
+```
+Passou a ser invalido a possibilidade de teste com o Nmap pelo tempo de demora do scan de portas. Com o bot podemos realizar teste de acesso com usuario e senha (Quase um brut force pois teria que tentar as varias senhas por equipamento)
