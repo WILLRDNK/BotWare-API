@@ -1,0 +1,23 @@
+{
+  "name": "botware-api",
+  "version": "1.0.0",
+  "description": "Este projeto surgiu como solução para testar acesso remoto a equipamentos de rede(ONUs e Roteadores domesticos).👾",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WILLRDNK/BotWare-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WILLRDNK/BotWare-API/issues"
+  },
+  "homepage": "https://github.com/WILLRDNK/BotWare-API#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
