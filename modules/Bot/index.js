@@ -1,6 +1,6 @@
 import { launch } from 'puppeteer';
 
-class BotOnuHunter{
+class Bot{
 
 
     async newBrowser(){
@@ -28,4 +28,4 @@ class BotOnuHunter{
 
 }
 
-export default BotOnuHunter
+export default Bot
