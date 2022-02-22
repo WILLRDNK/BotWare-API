@@ -1,31 +1,36 @@
-import { launch } from 'puppeteer';
+const puppeteer = require('puppeteer');
 
 class Bot{
 
-
-    async newBrowser(){
-        const browser = await launch( {headless:true, ignoreHTTPSErrors: true}  );
-        return browser
-    }
-    
-    async newPage(){
-        const browser = await this.newBrowser();
+    async newBrowser(url){
+        const browser = await puppeteer.launch( {headless:true, ignoreHTTPSErrors: true}  );
         const page = await browser.newPage();
-        return page
-    }
-
-    async goTo(url){
-        const page = await this.newPage()
-        const sla = await page.goto(url,{timeout:10000});
-        return sla
-    }
-
-    async exit(){
-        const browser = await this.newBrowser()
-        const exit = await browser.close()
-        return exit
-    }
-
+        let errorHttpResponse = {}
+        try{
+            try{
+                const nice = await page.goto(`https://${url}/login.cgi`,{timeout:10000})
+            }catch{ 
+                const nice = await page.goto(`https://${url}:80`,{timeout:10000})
+            }
+            }catch(erro){
+                browser.close()
+                return console.log(errorHttpResponse = {
+                    title: "Error" ,
+                    status: "inacessivel",
+                    ip:url
+                    });
+            }
+        
+        const log = await page.evaluate(() =>{
+            return {
+                title: document.querySelector('title').innerHTML, 
+            }
+        });
+        log.status = "Acessivel"
+        log.ip = url
+        await browser.close();
+        return log
+    } 
 }
 
-export default Bot
+module.exports = Bot
