@@ -28,7 +28,7 @@ Passou a ser invalido a possibilidade de teste com o Nmap pelo tempo de demora d
 
 Coletar dados do da tag **title** da pagina para identificar o tipo de equipamento. Resposta a ser entregue:
 
-```json
+```javascript
 
 Metodo POST body:
 
@@ -54,7 +54,7 @@ Resposta de erro:
 
 ```
 
-## Fluxo esperado!
+## Fluxo esperado
 
 ```mermaid
 graph LR
