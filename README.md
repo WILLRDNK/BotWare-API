@@ -39,16 +39,16 @@ Metodo POST body:
 Resposta esperada: status 200
 
     {
-        status: "Acessivel",
         title: "Titulo da pagina",
+        status: "Acessivel",
         ip: "192.168.1.1" // Exemplo
     }
 
 Resposta de erro:
 
     {
-        status: "inacessível",
         title:"Error",
+        status: "inacessível",
         ip:"192.168.1.1" // Exemplo
     }
 
