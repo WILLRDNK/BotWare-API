@@ -26,7 +26,35 @@ Passou a ser invalido a possibilidade de teste com o Nmap pelo tempo de demora d
 
 ### Primeiro objetivo
 
-Coletar dados do da tag **title** da pagina para identificar o tipo de equipamento.
+Coletar dados do da tag **title** da pagina para identificar o tipo de equipamento. Resposta a ser entregue:
+
+```json
+
+Metodo POST body:
+
+    {
+        ip:"192.168.1.1" // Exemplo
+    }
+
+Resposta esperada: status 200
+
+    {
+        status: "Acessivel",
+        title: "Titulo da pagina",
+        ip: "192.168.1.1" // Exemplo
+    }
+
+Resposta de erro:
+
+    {
+        status: "inacessível",
+        title:"Error",
+        ip:"192.168.1.1" // Exemplo
+    }
+
+```
+
+## Fluxo esperado!
 
 ```mermaid
 graph LR
