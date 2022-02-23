@@ -1,18 +1,17 @@
 const { paperFormats } = require("puppeteer");
-const Bot = require( "./index")
+const Bot = require( "./index2")
 
 const onuHunter = new Bot;
 
 
+async function teste(){
+    await onuHunter.newBrowser(false);
 
-async function pppa(){
-
-    const opp = await onuHunter.newBrowser('100.64.226.191');
-
-    console.log(opp)
+    await onuHunter.newPage();
+    await onuHunter.goTo(`https://100.64.14.108`);
+    const log = await onuHunter.scraping();
     
-    onuHunter.exitBrowser()
-};
+    console.log(log)
+}
 
-
-pppa()
+teste()
