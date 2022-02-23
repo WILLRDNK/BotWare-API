@@ -1,5 +1,5 @@
 const { paperFormats } = require("puppeteer");
-const Bot = require( "./index2")
+const Bot = require( "./index")
 
 const onuHunter = new Bot;
 
