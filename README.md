@@ -8,10 +8,6 @@ Este projeto surgiu como solução para testar acesso remoto a equipamentos de r
 * Receber e entregar informações atraves de requisições web.
 * Construção escalavel de forma que possa ser adicionada novas funções a aplicação.
 
-### Autor
-
-Willian da Rosa Rodrigues
-
 ```mermaid
 graph LR
 A[http request] ---> B((Bot))
@@ -66,3 +62,8 @@ A[http request] --> B((Bot))-->
      J(Erro Request) -->j(Status 400)-->H
 
 ```
+### Autor
+
+Willian da Rosa Rodrigues
+
+
