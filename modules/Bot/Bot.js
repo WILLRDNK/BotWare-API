@@ -5,7 +5,6 @@ class Bot{
     async newBrowser(param){
         const browser = await puppeteer.launch( {headless:param, ignoreHTTPSErrors: true} );
         this.browser = browser
-
     }
 
     async newPage(){
