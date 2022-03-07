@@ -8,8 +8,7 @@ async function scanerTesteAcessoRemoto(ip){
     await onuHunter.scanner(ip)
     const log = await onuHunter.title();
     await onuHunter.closeBrowser();
-    
     return log
 }
 
-module.exports = scanerTesteAcessoRemoto()
+module.exports = scanerTesteAcessoRemoto
