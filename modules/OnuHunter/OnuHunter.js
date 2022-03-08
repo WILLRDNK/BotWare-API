@@ -43,7 +43,5 @@ class OnuHunter extends Bot{
         return log
     }
 
-
-
 }
 module.exports = OnuHunter

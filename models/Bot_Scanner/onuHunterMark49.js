@@ -5,9 +5,18 @@ async function scanerTesteAcessoRemoto(ip){
     await onuHunter.newBrowser(true);
     await onuHunter.newPage();
     await onuHunter.scanner(ip);
-
-    await onuHunter.closeBrowser();
+    let log = {};
+    const titulo = await onuHunter.title();
+    log.title = titulo.title;
+    if(log.title == undefined || null){
+        log = console.error(`deu pau`);
+    }else{
+        log.status = 200;
+        log.ip = ip
+    }
     
+    await onuHunter.closeBrowser();
+
     return log
 }
 
