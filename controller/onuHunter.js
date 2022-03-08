@@ -9,9 +9,6 @@ module.exports = app =>{
 
     app.post('/onuhunter/mark49',async (req, res) => {
             const corpo = req.body;
-            if(corpo.ip == undefined){
-            res.json({erro:"ip não definido"});
-            }
             const scan = await scanerTesteAcessoRemoto(corpo.ip);
             res.json(scan);
             })
