@@ -6,13 +6,13 @@ Este projeto surgiu como solução para testar acesso remoto a equipamentos de r
 
 * Facilitar o diagnostico de quantidade de equipamentos que estão com acesso remoto habilitado.
 * Receber e entregar informações atraves de requisições web.
-* Construção escalavel de forma que possa ser adicionada novas funções a aplicação.
+* Construção escalavel de forma que possa ser adicionada novas funções a aplicações.
 
 ```mermaid
 graph LR
-A[http request] ---> B((Bot))
+A[http request] ---> B(Bot)
 A --> C(nmap)
-B --> D{json response}
+B -->D[json response]
 C --> Faill
 ```
 
